@@ -12,6 +12,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "prebuild": "cp ./README.md ./dist",
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",

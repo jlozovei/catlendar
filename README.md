@@ -1,47 +1,41 @@
-# Svelte + Vite
+# Catlendar
 
-This template should help get you started developing with Svelte in Vite.
+A cool calendar, with cat images. :cat: :cat2:
 
-## Recommended IDE Setup
+## :scroll: About
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+A simple Svelte website, created using Vite.
 
-## Need an official Svelte framework?
+To fetch cat images, it uses the [The Cat API](https://thecatapi.com/) service.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## :pencil: Contributing
 
-## Technical considerations
+You can contribute to this project following the steps below:
 
-**Why use this over SvelteKit?**
+- Fork the repo
+- Create a new branch
+- Do the work
+- Fill a PR, assign it to you and, if possible, write a cool description
+- Wait for the review
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+Also, take a look at the [contributing guide](https://github.com/jlozovei/catlendar/blob/master/.github/CONTRIBUTING.md)!
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+**Don't be afraid to fill some issues, if you want! :heart:**
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+## :computer: Developing
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+After forking and cloning the project in your local environment, run the following commands:
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+```bash
+# install dependencies
+npm i
+# or yarn
 
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+# run the project at localhost:5173
+npm start
+# or yarn start
 ```
+
+## :closed_lock_with_key: License
+
+Licensed under the [MIT](https://github.com/jlozovei/catlendar/blob/master/LICENSE).
