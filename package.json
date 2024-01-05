@@ -1,0 +1,85 @@
+{
+  "name": "catlendar",
+  "description": "",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "author": "Julio Lozovei <jlozovei@gmail.com> (https://jlozovei.dev)",
+  "homepage": "https://github.com/jlozovei/catlendar#readme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlozovei/catlendar/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "lint": "eslint . --ext .js,.svelte --fix",
+    "format": "prettier --write \"**/*.{js,json,svelte}\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-svelte": "^2.35.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-svelte": "^3.1.2",
+    "svelte": "^4.2.8",
+    "vite": "^5.0.8"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,css}": [
+      "npm run format"
+    ],
+    "*.js": "eslint --cache --fix"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "useTabs": false,
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "plugins": [
+      "prettier-plugin-svelte"
+    ],
+    "overrides": [
+      {
+        "files": "*.svelte",
+        "options": {
+          "parser": "svelte"
+        }
+      }
+    ]
+  },
+  "eslintConfig": {
+    "rules": {},
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "extends": [
+      "plugin:svelte/recommended",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "dependencies": {
+    "@thatapicompany/thecatapi": "^1.0.2",
+    "date-fns": "^3.1.0"
+  }
+}
