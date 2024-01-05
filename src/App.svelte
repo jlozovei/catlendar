@@ -52,7 +52,7 @@
 
   .calendar__header {
     padding: 24px;
-    background-color: #2f8ab4;
+    background-color: #692dcd;
     border-radius: 4px 4px 0 0;
   }
 

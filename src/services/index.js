@@ -8,8 +8,6 @@ const getImage = async () => {
   const imageList = await theCatAPI.images.searchImages({
     limit: 1
   });
-  console.log('imageList', imageList);
-
   const image = imageList[0].url;
 
   return image;

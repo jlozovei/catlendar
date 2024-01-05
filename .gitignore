@@ -2,3 +2,4 @@
 .svelte-kit/
 package
 .eslintcache
+dist/
